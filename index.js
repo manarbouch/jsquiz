@@ -88,7 +88,11 @@
         previousButton.style.display = 'none';
         nextButton.style.display = 'none'; // Hide next button on the first slide
         retrybutton.style.display = 'none';
-      } else {
+      } else if (currentSlide === 1){
+        previousButton.style.display = 'none';
+        nextButton.style.display = 'inline-block';
+
+      }else{
         previousButton.style.display = 'inline-block';
         nextButton.style.display = 'inline-block'; // Show next button on subsequent slides
       }
@@ -190,3 +194,4 @@
       startTimer();  // Start the timer
     });
 })();
+
